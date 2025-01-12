@@ -56,7 +56,7 @@ class GaussianNaiveBayesClassifier:
             for cls in self.classes:
                 posterior = log(self.priors[cls])
                 for x, mean, sd in zip(sample, self.means[cls], self.sds[cls]):
-                    posterior[cls] += log(nd(x, sd, mean))
+                    posterior += log(nd(x, sd, mean))
                 posteriors[cls] = posterior
                 
             total = sum(exp(posteriors[cls]) for cls in posteriors)
