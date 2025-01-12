@@ -3,8 +3,6 @@ from collections import defaultdict
 
 # Rozkład normalny
 def nd(x, sd, mean):
-    if sd == 0:
-        return 1.0 if x == mean else 0.0
     root = (1 / (sqrt(2 * pi) * sd))
     exponent = exp(-((x - mean) ** 2) / (2 * sd ** 2))
     return root * exponent
@@ -19,17 +17,19 @@ class GaussianNaiveBayesClassifier:
         self.priors = {}
 
         # Policz priors
+        total_samples = len(y)
         for cls in self.classes:
-            self.priors[cls] = y.count(cls) / len(y)
+            self.priors[cls] = (y == cls).sum() / total_samples
             
         # Oblicz średnią i odchylenie standardowe dla każdej cechy w każdej klasie
         for cls in self.classes:
-            cls_data = [X[i] for i in range(len(X)) if y[i] == cls]
+            cls_data = [X[i] for i in range(len(X)) if list(y)[i] == cls]
             cls_data_transposed = list(zip(*cls_data))
 
             for feature in cls_data_transposed:
                 mean = sum(feature) / len(feature)
                 sd = sqrt(sum((x - mean) ** 2 for x in feature) / len(feature))
+                sd = max(sd, 1e-10) 
                 self.means[cls].append(mean)
                 self.sds[cls].append(sd)
 
@@ -41,10 +41,10 @@ class GaussianNaiveBayesClassifier:
                 class_probabilities[cls] = log(self.priors[cls])
                 for i in range(len(row)):
                     mean = self.means[cls][i]
-                    sd = self.means[cls][i]
+                    sd = max(self.sds[cls][i], 1e-10) # dodanie bardzo małej liczby w celu uniknięcia błędów z zerem
                     x = row[i]
-                    class_probabilities[cls] += log(nd(x, sd, mean)) # założenie niezależności cech
-            predictions.append(max(class_probabilities[cls], key=class_probabilities.get)) # reguła decyzyjna
+                    class_probabilities[cls] += log(nd(x, sd, mean)) # Założenie niezależności cech
+            predictions.append(max(class_probabilities, key=class_probabilities.get)) # Reguła decyzyjna
         return predictions
 
 
