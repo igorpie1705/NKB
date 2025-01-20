@@ -2,7 +2,7 @@
 
 ## Spis treści
 
-- [Projekt Machine Learning: Klasyfikacja Irysów i Grzybów za pomocą Naiwnego Klasyfikatora Bayesowego](#projekt-machine-learning-klasyfikacja-irysów-i-grzybów-za-pomocą-naiwnego-klasyfikatora-bayesowego)
+- [Projekt Machine Learning: Naiwny Klasyfikatore Bayesowy](#projekt-machine-learning-naiwy-klasyfikator-bayesowy)
   - [Spis treści](#spis-treści)
   - [Opis projektu](#opis-projektu)
   - [Struktura projektu](#struktura-projektu)
