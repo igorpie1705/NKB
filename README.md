@@ -82,15 +82,15 @@ Projekt wykorzystuje dwa zbiory danych:
 
 **Zbiór Irysów**:
 
-Cechy: długość i szerokość działki kielicha oraz płatka.
+- Cechy: długość i szerokość działki kielicha oraz płatka.
 
-Cel: klasyfikacja gatunku irysa (Setosa, Versicolor, Virginica).
+- Cel: klasyfikacja gatunku irysa (Setosa, Versicolor, Virginica).
 
 **Zbiór grzybów:**
 
-Cechy: różne cechy kapelusza, trzonu, zapachu itp.
+- Cechy: różne cechy kapelusza, trzonu, zapachu itp.
 
-Cel: klasyfikacja grzybów jako jadalne lub trujące.
+- Cel: klasyfikacja grzybów jako jadalne lub trujące.
 
 ---
 
