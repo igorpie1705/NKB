@@ -110,7 +110,7 @@ Dzięki tej analizie lepiej zrozumiano strukturę danych oraz ich przydatność 
 
 ## Modelowanie
 
-Do klasyfikacji danych wykorzystano Naiwny Klasyfikator Bayesowski. Jest to algorytm probabilistyczny, który stosuje Twierdzenie Bayesa z założeniem, że cechy są niezależne. Model jest prosty, szybki w trenowaniu i efektywny w zadaniach klasyfikacyjnych. Szczegóły działania można zobaczyć wchodząc w linki w zakładce [Referencje](#Referencje).
+Do klasyfikacji danych wykorzystano Naiwny Klasyfikator Bayesowski. Jest to algorytm probabilistyczny, który stosuje Twierdzenie Bayesa z założeniem, że cechy są niezależne. Szczegóły działania można zobaczyć wchodząc w linki w zakładce [Referencje](#Referencje).
 
 Modele zostały stworzone uwzględniając:
 
