@@ -2,7 +2,6 @@
 
 ## Spis treści
 
-- [Projekt Machine Learning: Naiwny Klasyfikatore Bayesowy](#projekt-machine-learning-naiwy-klasyfikator-bayesowy)
   - [Opis projektu](#opis-projektu)
   - [Struktura projektu](#struktura-projektu)
   - [Instalacja](#instalacja)
