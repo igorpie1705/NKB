@@ -134,7 +134,7 @@ Wyniki ewaluacji pokazały, że Naiwny Klasyfikator Bayesowski jest szczególnie
 
 ## Podsumowanie
 
-Projekt pokazuje, jak skutecznie można zastosować Naiwny Klasyfikator Bayesowski do klasyfikacji różnorodnych zbiorów danych. Wyniki analizy i ewaluacji potwierdzają, że nawet proste algorytmy na bazie matematyki mogą być skuteczne i mieć szerokie zastosowanie w praktyce, zwłaszcza w zadaniach klasyfikacyjnych
+Projekt pokazuje, jak skutecznie można zastosować Naiwny Klasyfikator Bayesowski do klasyfikacji różnorodnych zbiorów danych. Wyniki analizy i ewaluacji potwierdzają, że nawet proste algorytmy o fundamentach w matematyce mogą być skuteczne i mieć szerokie zastosowanie w praktyce, zwłaszcza w zadaniach klasyfikacyjnych.
 
 ---
 
