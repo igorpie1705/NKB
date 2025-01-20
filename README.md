@@ -1,4 +1,4 @@
-# Projekt Machine Learning: Klasyfikacja Irysów i Grzybów za pomocą Naiwnego Klasyfikatora Bayesowego
+# Projekt Machine Learning: Naiwny Klasyfikatore Bayesowy
 
 ## Spis treści
 
@@ -142,8 +142,8 @@ Projekt pokazuje, jak skutecznie można zastosować Naiwny Klasyfikator Bayesows
 
 Projekt został opracowany przez:
 
-- **Maciej Sitny**
 - **Igor Piesik**
+- **Maciej Sitny**
 
 ---
 
