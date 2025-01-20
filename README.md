@@ -27,6 +27,8 @@ Celem projektu jest klasyfikacja dwóch zbiorów danych przy użyciu algorytmu *
 
 Projekt obejmuje eksploracyjną analizę danych (EDA), budowę modelu oraz jego ocenę.
 
+Do implementacji algorytmu wykorzystano język Python w środowisku Jupyter Notebook, wraz z bibliotekami takimi jak scikit-learn, pandas, matplotlib, seaborn oraz numpy.
+
 ---
 
 ## Struktura projektu
