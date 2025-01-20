@@ -35,10 +35,10 @@ W projekcie znajduje się 6 głównych plików:
 
 - **`eda_iris.ipynb`** – przechowuje wstępną eksploracyjną analizę danych (EDA) dla zbioru danych Iris. Zawiera wizualizacje oraz interpretacje i wnioski.
 - **`evaluation_iris.ipynb`** – zawiera ewaluację modelu dla zbioru Iris. Wykorzystuje algorytm klasyfikacji oraz ocenia jego wydajność.
-- **`GaussianNaiveBayesClassifier`** – Implementacja naiwnego klasyfikatora bayesowego (Gaussian Naive Bayes) dla zbioru danych Iris.
-- **`eda_mushroom.ipynb`** –
-- **`evaluation_mushroom.ipynb`** –
-- **`MultinomialNaiveBayesClassifier`** –
+- **`GaussianNaiveBayesClassifier`** – Implementacja naiwnego klasyfikatora bayesowskiego (Gaussian Naive Bayes) dla zbioru danych Iris.
+- **`eda_mushrooms.ipynb`** – wstępna eksploracyjna analiza danych ze zbioru Mushrooms i przygotowanie tych danych do nakarmienia nimi modelu.
+- **`evaluation_mushrooms.ipynb`** – ewaluacja modelu dla zbioru Mushrooms. Zawiera kroki korzystania z klasyfikatora i różne statystyki nt. wyników.
+- **`MultinomialNaiveBayesClassifier`** – implementacja naiwnego klasyfikatora bayesowskiego (Multinomial Naive Bayes) dla zbioru danych Mushrooms.
 
 ---
 
@@ -66,12 +66,12 @@ Aby korzystać z projektu uruchom następujące komendy:
 1. Uruchom i zapoznaj się z notatnikami `EDA` (Exploratory Data Analysis):
    ```bash
    jupyter notebook eda_iris.ipynb
-   jupyter notebook eda_mushroom.ipynb
+   jupyter notebook eda_mushrooms.ipynb
    ```
 2. Uruchom i zapoznaj się z notatnikami `evaluation`
    ```bash
    jupyter notebook evaluation_iris.ipynb
-   jupyter notebook evaluation_mushroom.ipynb
+   jupyter notebook evaluation_mushrooms.ipynb
    ```
 
 ---
