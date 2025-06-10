@@ -1,57 +1,58 @@
-# Projekt Machine Learning: Naiwny Klasyfikatore Bayesowy
+# Machine Learning Project: Naive Bayes Classifier
 
-## Spis treści
+## Table of Contents
 
-  - [Opis projektu](#opis-projektu)
-  - [Struktura projektu](#struktura-projektu)
-  - [Instalacja](#instalacja)
-  - [Sposób użycia](#sposób-użycia)
-  - [Opis danych](#opis-danych)
-  - [Eksploracyjna analiza danych (EDA)](#eksploracyjna-analiza-danych-eda)
-  - [Modelowanie](#modelowanie)
-  - [Ewaluacja](#ewaluacja)
-  - [Podsumowanie](#podsumowanie)
-  - [Autorzy](#autorzy)
-  - [Referencje](#referencje)
-
----
-
-## Opis projektu
-
-Celem projektu jest klasyfikacja dwóch zbiorów danych przy użyciu algorytmu **Naiwnego Klasyfikatora Bayesowego**:
-
-- **Zbiór danych Irysów:** Klasyfikacja gatunków kwiatów irysa.
-- **Zbiór danych Grzybów:** Klasyfikacja grzybów jako jadalne lub trujące.
-
-Projekt obejmuje eksploracyjną analizę danych (EDA), budowę modelu oraz jego ocenę.
-
-Do implementacji algorytmu wykorzystano język Python w środowisku Jupyter Notebook, wraz z bibliotekami takimi jak scikit-learn, pandas, matplotlib, seaborn oraz numpy.
+* [Project Description](#project-description)
+* [Project Structure](#project-structure)
+* [Installation](#installation)
+* [Usage](#usage)
+* [Data Description](#data-description)
+* [Exploratory Data Analysis (EDA)](#exploratory-data-analysis-eda)
+* [Modeling](#modeling)
+* [Evaluation](#evaluation)
+* [Summary](#summary)
+* [Authors](#authors)
+* [References](#references)
 
 ---
 
-## Struktura projektu
+## Project Description
 
-W projekcie znajduje się 6 głównych plików:
+The goal of this project is to classify two datasets using the **Naive Bayes Classifier** algorithm:
 
-- **`eda_iris.ipynb`** – przechowuje wstępną eksploracyjną analizę danych (EDA) dla zbioru danych Iris. Zawiera wizualizacje oraz interpretacje i wnioski.
-- **`evaluation_iris.ipynb`** – zawiera ewaluację modelu dla zbioru Iris. Wykorzystuje algorytm klasyfikacji oraz ocenia jego wydajność.
-- **`GaussianNaiveBayesClassifier`** – Implementacja naiwnego klasyfikatora bayesowskiego (Gaussian Naive Bayes) dla zbioru danych Iris.
-- **`eda_mushrooms.ipynb`** – wstępna eksploracyjna analiza danych ze zbioru Mushrooms i przygotowanie tych danych do nakarmienia nimi modelu.
-- **`evaluation_mushrooms.ipynb`** – ewaluacja modelu dla zbioru Mushrooms. Zawiera kroki korzystania z klasyfikatora i różne statystyki nt. wyników.
-- **`MultinomialNaiveBayesClassifier`** – implementacja naiwnego klasyfikatora bayesowskiego (Multinomial Naive Bayes) dla zbioru danych Mushrooms.
+* **Iris Dataset:** Classifying iris flower species.
+* **Mushroom Dataset:** Classifying mushrooms as edible or poisonous.
+
+The project includes exploratory data analysis (EDA), model building, and performance evaluation.
+
+The algorithm was implemented in Python using Jupyter Notebook, along with libraries such as scikit-learn, pandas, matplotlib, seaborn, and numpy.
 
 ---
 
-## Instalacja
+## Project Structure
 
-Aby skonfigurować projekt, wykonaj następujące kroki:
+The project includes six main files:
 
-1. Sklonuj repozytorium:
+* **`eda_iris.ipynb`** – Contains initial exploratory data analysis for the Iris dataset, including visualizations, interpretations, and conclusions.
+* **`evaluation_iris.ipynb`** – Contains model evaluation for the Iris dataset, using the classifier and analyzing its performance.
+* **`GaussianNaiveBayesClassifier`** – Implementation of the Gaussian Naive Bayes classifier for the Iris dataset.
+* **`eda_mushrooms.ipynb`** – Initial exploratory analysis of the Mushroom dataset and preparation of the data for modeling.
+* **`evaluation_mushrooms.ipynb`** – Evaluation of the model on the Mushroom dataset, including usage of the classifier and statistical analysis of the results.
+* **`MultinomialNaiveBayesClassifier`** – Implementation of the Multinomial Naive Bayes classifier for the Mushroom dataset.
+
+---
+
+## Installation
+
+To set up the project, follow these steps:
+
+1. Clone the repository:
+
    ```bash
    git clone https://github.com/igorpie1705/NKB.git
    cd NKB
    ```
-2. Zainstaluj wymagane zależności:
+2. Install the required dependencies:
 
    ```bash
    pip install -r requirements.txt
@@ -59,16 +60,18 @@ Aby skonfigurować projekt, wykonaj następujące kroki:
 
 ---
 
-## Sposób użycia
+## Usage
 
-Aby korzystać z projektu uruchom następujące komendy:
+To use the project, run the following commands:
 
-1. Uruchom i zapoznaj się z notatnikami `EDA` (Exploratory Data Analysis):
+1. Launch and explore the `EDA` notebooks:
+
    ```bash
    jupyter notebook eda_iris.ipynb
    jupyter notebook eda_mushrooms.ipynb
    ```
-2. Uruchom i zapoznaj się z notatnikami `evaluation`
+2. Launch and explore the `evaluation` notebooks:
+
    ```bash
    jupyter notebook evaluation_iris.ipynb
    jupyter notebook evaluation_mushrooms.ipynb
@@ -76,80 +79,78 @@ Aby korzystać z projektu uruchom następujące komendy:
 
 ---
 
-## Opis danych
+## Data Description
 
-Projekt wykorzystuje dwa zbiory danych:
+The project uses two datasets:
 
-**Zbiór Irysów**:
+**Iris Dataset:**
 
-- Cechy: długość i szerokość działki kielicha oraz płatka.
+* Features: sepal length & width, petal length & width.
+* Target: classify iris species (Setosa, Versicolor, Virginica).
 
-- Cel: klasyfikacja gatunku irysa (Setosa, Versicolor, Virginica).
+**Mushroom Dataset:**
 
-**Zbiór grzybów:**
-
-- Cechy: różne cechy kapelusza, trzonu, zapachu itp.
-
-- Cel: klasyfikacja grzybów jako jadalne lub trujące.
+* Features: various characteristics of cap, stem, odor, etc.
+* Target: classify mushrooms as edible or poisonous.
 
 ---
 
-## Eksploracyjna analiza danych (EDA)
+## Exploratory Data Analysis (EDA)
 
-Podczas eksploracyjnej analizy danych wykonano:
+During EDA, the following steps were performed:
 
-- Wizualizację danych za pomocą histogramów, wykresów pudełkowych i par (pair plots), aby zrozumieć rozkład cech oraz relacje między nimi.
-- Sprawdzenie brakujących wartości w zbiorach danych i ich potencjalnego wpływu na modelowanie.
-- Analizę rozkładu cech oraz identyfikację potencjalnych wartości odstających.
+* Visualizations using histograms, box plots, and pair plots to understand feature distributions and relationships.
+* Checking for missing values and their potential impact on modeling.
+* Analysis of feature distributions and identification of potential outliers.
 
-Dzięki tej analizie lepiej zrozumiano strukturę danych oraz ich przydatność do klasyfikacji.
-
----
-
-## Modelowanie
-
-Do klasyfikacji danych wykorzystano Naiwny Klasyfikator Bayesowski. Jest to algorytm probabilistyczny, który stosuje Twierdzenie Bayesa z założeniem, że cechy są niezależne. Szczegóły działania można zobaczyć wchodząc w linki w zakładce [Referencje](#Referencje).
-
-Modele zostały stworzone uwzględniając:
-
-- Przygotowanie danych, w tym normalizację cech liczbowych oraz kodowanie zmiennych kategorycznych w przypadku zbioru danych grzybów.
-- Podział danych na zbiory treningowe i testowe w stosunku 70:30, aby zapewnić wiarygodną ocenę modelu.
-- Proces trenowania modeli oraz ich testowania na niezależnym zbiorze danych.
-
-Dzięki temu uzyskano wystarczające podstawy do przeprowadzenia ewaluacji wydajności algorytmu.
+This analysis provided better insight into the data structure and its suitability for classification.
 
 ---
 
-## Ewaluacja
+## Modeling
 
-Do oceny modeli wykorzystano następujące metryki:
+The Naive Bayes Classifier was used for classification. It is a probabilistic algorithm that applies Bayes' Theorem under the assumption of feature independence. More details can be found in the [References](#references) section.
 
-- Dokładność (Accuracy): Mierzona jako stosunek poprawnie sklasyfikowanych przykładów do wszystkich przykładów w zbiorze testowym.
-- Macierz pomyłek: Analiza szczegółowych wyników klasyfikacji, w tym liczby fałszywych pozytywów i fałszywych negatywów.
-- Macierz prawdopodobieństw: Obliczenie prawdopodobieństwa przypisania do danej kategorii i przedstawienie wyników na histogramie.
+Modeling included:
 
-Wyniki ewaluacji pokazały, że Naiwny Klasyfikator Bayesowski jest szczególnie skuteczny w zadaniach klasyfikacyjnych na dobrze przygotowanych danych.
+* Data preparation, such as normalization of numerical features and encoding of categorical variables (for the Mushroom dataset).
+* Splitting the data into training and test sets in a 70:30 ratio to ensure reliable model evaluation.
+* Training and testing of models on independent data subsets.
 
----
-
-## Podsumowanie
-
-Projekt pokazuje, jak skutecznie można zastosować Naiwny Klasyfikator Bayesowski do klasyfikacji różnorodnych zbiorów danych. Wyniki analizy i ewaluacji potwierdzają, że nawet proste algorytmy o fundamentach w matematyce mogą być skuteczne i mieć szerokie zastosowanie w praktyce, zwłaszcza w zadaniach klasyfikacyjnych.
+These steps provided a solid foundation for evaluating the algorithm’s performance.
 
 ---
 
-## Autorzy
+## Evaluation
 
-Projekt został opracowany przez:
+The following metrics were used to evaluate the models:
 
-- **Igor Piesik**
-- **Maciej Sitny**
+* **Accuracy:** The ratio of correctly classified samples to the total number of samples in the test set.
+* **Confusion Matrix:** Detailed classification results, including false positives and false negatives.
+* **Probability Matrix:** Calculation of the probability of assignment to each category, presented as a histogram.
+
+The evaluation results showed that the Naive Bayes Classifier is particularly effective for classification tasks on well-prepared datasets.
 
 ---
 
-## Referencje
+## Summary
 
-1. Dokumentacja scikit-learn: [naive-bayes](https://scikit-learn.org/1.5/modules/naive_bayes.html)
+This project demonstrates how effectively a Naive Bayes Classifier can be applied to classify diverse datasets. The analysis and evaluation results confirm that even simple algorithms with strong mathematical foundations can be effective and have broad practical applications, especially in classification tasks.
+
+---
+
+## Authors
+
+This project was developed by:
+
+* **Igor Piesik**
+* **Maciej Sitny**
+
+---
+
+## References
+
+1. scikit-learn documentation: [naive-bayes](https://scikit-learn.org/1.5/modules/naive_bayes.html)
 2. Kaggle: [naive-bayes-classifier-in-python](https://www.kaggle.com/code/prashant111/naive-bayes-classifier-in-python)
-3. Baza danych grzybów: [mushroom-classification](https://www.kaggle.com/datasets/uciml/mushroom-classification)
-4. Kanał StatQuest: [Naive Bayes, Clearly Explained!!!](https://www.youtube.com/watch?v=O2L2Uv9pdDA&ab_channel=StatQuestwithJoshStarmer)
+3. Mushroom dataset: [mushroom-classification](https://www.kaggle.com/datasets/uciml/mushroom-classification)
+4. StatQuest channel: [Naive Bayes, Clearly Explained!!!](https://www.youtube.com/watch?v=O2L2Uv9pdDA&ab_channel=StatQuestwithJoshStarmer)
