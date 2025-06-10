@@ -49,8 +49,8 @@ To set up the project, follow these steps:
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/igorpie1705/NKB.git
-   cd NKB
+   git clone https://github.com/igorpie1705/naive-bayes-classifier.git
+   cd naive-bayes-classifier
    ```
 2. Install the required dependencies:
 
